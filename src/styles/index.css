@@ -236,7 +236,7 @@ main {
 }
 .input__block {
     display: flex;
-    /* padding: 15px; */
+    padding: 15px;
     align-items: center;
     background-color: var(--fic);
     border: 1px solid var(--tc);
