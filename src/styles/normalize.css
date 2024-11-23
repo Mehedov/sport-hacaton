@@ -18,6 +18,8 @@ input {
     font-weight: 700;
     font-size: 17px;
     border: none;
+
+    background-color: #262626a8;
 }
 
 html {
@@ -29,6 +31,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     /* color: variables.$black; */
+    padding-bottom: 20px;
 }
 
 main {
@@ -68,12 +71,6 @@ h2 {
 
 a {
     text-decoration: none;
-}
-
-input {
-    border: none;
-    outline: none;
-    background-color: #363636;
 }
 
 body {

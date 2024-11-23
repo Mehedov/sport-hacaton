@@ -1,9 +1,10 @@
 let light = document.querySelector(`#light`)
 let dark = document.querySelector(`#dark`)
 const root = document.querySelector(':root')
-
+let bell
 light.addEventListener('click', changeColorLight)
 dark.addEventListener('click', changeColorDark)
+let notification = false
 
 function changeColorLight() {
     light.classList.add('theme-switcher__btn--active')
@@ -56,8 +57,8 @@ const fp = flatpickr('#datepicker', {
     locale: 'ru',
     onChange: function (selectedDates) {
         if (selectedDates.length === 2) {
-            const startDate = formatDate(selectedDates[C_0]())
-            const endDate = formatDate(selectedDates[C_1]())
+            const startDate = formatDate(selectedDates[0])
+            const endDate = formatDate(selectedDates[1])
             const result = startDate + '-' + endDate
             document.getElementById('result').innerText = result
             console.log(result)
@@ -94,3 +95,35 @@ document.addEventListener('DOMContentLoaded', function () {
     minRange.addEventListener('input', updateMin)
     maxRange.addEventListener('input', updateMax)
 })
+
+function changeBell(evt) {
+    let images = document.querySelectorAll(`#mainImg`)
+    if (bell == `empty`) {
+        bell = `green`
+    } else {
+        bell = `empty`
+        console.log(bell)
+    }
+    evt.src = `../media/bell-${bell}.svg`
+}
+
+function togglePassword() {
+    const passwordInput = document.querySelector('#password')
+    const toggleIcon = document.querySelector('#toggle-password')
+
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text' // Показываем пароль
+    } else {
+        passwordInput.type = 'password' // Скрываем пароль
+    }
+}
+
+function showNotification() {
+    if (notification == false) {
+        document.querySelector(`#notBlock`).style.display = 'block'
+        notification = true
+    } else if (notification == true) {
+        document.querySelector(`#notBlock`).style.display = 'none'
+        notification = false
+    }
+}

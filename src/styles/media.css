@@ -136,4 +136,80 @@
     .filter__choice.active {
         width: 100%;
     }
+
+    .profile__container {
+        width: 320px;
+    }
+
+    .profile__username {
+        img {
+            width: 50px;
+        }
+    }
+
+    .profile__head {
+        p {
+            font-size: 17px;
+        }
+    }
+
+    .exit {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+    }
+
+    .profile_info__block {
+        span {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        input {
+            width: 150px;
+        }
+    }
+
+    #password {
+        width: 120px;
+    }
+
+    .osob {
+        width: 330px;
+        font-size: 10px;
+    }
+
+    .event__container {
+        width: 300px;
+    }
+
+    .event__id {
+        font-size: 17px;
+    }
+
+    .event__title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .event__info {
+        width: 320px;
+    }
+
+    .notification__block {
+        position: absolute;
+        background-color: var(--hbc);
+        width: 200px;
+        height: fit-content;
+        /* padding: 30%; */
+        border-radius: 10px;
+        top: 170px;
+        right: 100px;
+        border: 1px solid #dbdbdb;
+        display: none;
+        z-index: 1;
+    }
 }
