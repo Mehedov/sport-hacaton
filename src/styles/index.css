@@ -1,7 +1,7 @@
 :root {
     --tc: #fff;
     --bgc: #000;
-    --hbc: #0d0d0d;
+    --hbc: #131313;
     --hcd: #363636;
 }
 
@@ -11,21 +11,8 @@
     margin: 0 auto;
 }
 
-body {
-    background-color: var(--bgc);
-    margin: 0 auto;
-}
-
-img {
-    max-width: 100%;
-}
-
-main {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* /////////////////////////////////////////////////////////// */
+/*  HEADER  */
 
 .header {
     background-color: var(--hbc);
@@ -85,11 +72,17 @@ main {
         }
     }
 }
-.header__but {
+
+.header__but,
+.button {
     font-size: 17px;
     font-weight: 400;
     padding: 10px 30px;
-    border-radius: 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -163,6 +156,10 @@ main {
     background-color: #6f6f6f;
     box-shadow: 0 4px 4px #00000029;
 }
+
+/* /////////////////////////////////////////////////////////// */
+/*HOME*/
+
 .home__container,
 .content {
     margin: auto;
@@ -202,7 +199,14 @@ main {
     gap: 30px;
 }
 
-/* AUTH  */
+.home-info__text {
+    width: 500px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* /////////////////////////////////////////////////////////// */
+/*AUTH*/
 
 .login__block,
 .register__block {
@@ -275,15 +279,12 @@ main {
     font-size: 29px;
     transition: 0.3;
     &:hover {
-        opacity: 0.8;
-        color: #14b8a6;
-    }
-    &:focus {
-        border: 3px solid #14b8a6;
+        opacity: 0.9;
     }
 }
 
-/* CALENDAR */
+/* /////////////////////////////////////////////////////////// */
+/*CALENDAR*/
 .calendar__сontainer {
     display: flex;
     justify-content: space-between;
@@ -305,9 +306,10 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        font-weight: 700;
         span {
             svg {
-                width: 20px;
+                width: 15px;
                 path {
                     fill: var(--tc);
                 }
@@ -318,7 +320,7 @@ main {
 }
 
 .filter__name__title {
-    font-size: 20px;
+    font-size: 14px;
     color: var(--tc);
     font-weight: 700;
 }
@@ -333,12 +335,18 @@ main {
 
 .calendar__items {
     width: 75%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--hbc);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.calendar__cards {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    padding: 30px;
-    border-radius: 10px;
-    background-color: var(--hbc);
 }
 
 .filter__choice {
@@ -347,17 +355,24 @@ main {
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.3s ease, opacity 0.3s ease;
+
     .checkbox,
     .ranges {
-        background-color: var(--hbc);
+        background-color: #2c2c2c;
         padding: 10px;
-        color: var(--tc);
+        font-size: 15px;
+        color: #fff;
+        font-weight: 500;
     }
 }
 
 .filter__choice:last-child {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#filterChoice4 {
+    height: auto;
 }
 
 .filter__choice.active {
@@ -414,10 +429,9 @@ main {
 #datepicker {
     background-color: #2c2c2c;
     color: #ffffff;
-    border: 1px solid #7d7d7d;
+    /* border: 1px solid #7d7d7d; */
     padding: 10px;
-    border-radius: 5px;
-    width: 100%;
+    font-size: 12px;
 }
 
 #datepicker::placeholder {
@@ -435,7 +449,7 @@ main {
 
 #amountMax,
 #amountMin {
-    color: var(--tc);
+    color: #fff;
     b {
         color: inherit;
     }
@@ -454,6 +468,7 @@ main {
     width: 258px;
     max-height: 250px;
     margin: auto;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.06);
     img {
         top: 4px;
         right: 4px;
@@ -480,5 +495,14 @@ main {
         font-size: 16px;
         font-weight: 600;
         line-height: 19.5px;
+    }
+}
+
+.button__more {
+    background-color: #14b8a6;
+    color: var(--tc);
+    font-weight: 700;
+    &:hover {
+        opacity: 0.9;
     }
 }

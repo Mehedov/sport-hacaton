@@ -1,4 +1,5 @@
 @media screen and (max-width: 1200px) {
+    /* CALENDAR */
     .header__container {
         padding: 20px;
     }
@@ -7,6 +8,7 @@
         margin: auto;
         width: 100%;
     }
+
     .left__panel {
         width: 100%;
         display: flex;
@@ -19,7 +21,13 @@
         font-size: 13px;
     }
     .calendar__items {
+        margin: auto;
+        width: 95%;
+    }
+    .calendar__cards {
+        position: static;
         width: 100%;
+        display: flex;
         margin: auto;
         justify-content: space-between;
     }
@@ -39,6 +47,8 @@
     .filter_input {
         width: 40px;
     }
+
+    /* HOME */
 }
 
 @media screen and (max-width: 375px) {
@@ -48,14 +58,82 @@
         gap: 20px;
     }
     .left__panel {
-        width: 100%;
+        width: 370px;
         flex-direction: column;
+        margin: auto;
     }
     .filter__choice {
         position: static;
         z-index: 1;
     }
     .filter__item {
+        width: 100%;
+    }
+    .card {
+        width: 291px;
+    }
+    .header-buttons {
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        gap: 20px;
+    }
+
+    .theme-switcher {
+        margin: 0;
+    }
+
+    .login__block,
+    .register__block {
+        max-width: 340px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .register__content {
+        width: 300px;
+    }
+
+    .register__form {
+    }
+
+    .form__title {
+        font-size: 30px;
+    }
+
+    .input__button {
+        font-size: 16px;
+    }
+
+    .home__content {
+        img {
+            width: 350px;
+            margin: auto;
+        }
+        flex-direction: column;
+        gap: 30px;
+        .home-info__text {
+            font-size: 18px;
+            font-weight: 700;
+            width: 300px;
+            text-align: left;
+        }
+        .home-info__link {
+            font-size: 17px;
+        }
+    }
+
+    #filterChoice4 {
+        width: 100%;
+        border: none;
+    }
+
+    #datepicker {
+        text-align: center;
+    }
+
+    .filter__choice.active {
         width: 100%;
     }
 }

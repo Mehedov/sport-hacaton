@@ -39,6 +39,8 @@ main {
 button {
     color: #fff;
     border: none;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 a,
@@ -72,6 +74,22 @@ input {
     border: none;
     outline: none;
     background-color: #363636;
+}
+
+body {
+    background-color: var(--bgc);
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+main {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .noselect {
